@@ -16,7 +16,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a15
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-ALLOW_MISSING_DEPENDENCIES=true
+ALLOW_MISSING_DEPENDENCIES := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := hi6250
@@ -42,7 +42,7 @@ TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd_backlight0/brightness
 TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/Battery
 TW_USE_NEW_MINADBD := true
-TW_USE_TOOLBOX := true
+#TW_USE_TOOLBOX := true
 TW_EXCLUDE_TWRPAPP := true
 TW_NO_LEGACY_PROPS := true
 BOARD_SUPPRESS_SECURE_ERASE := true
