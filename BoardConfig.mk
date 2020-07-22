@@ -1,4 +1,18 @@
-# hi6250 BoardConfig
+#
+# Copyright 2020 The Android Open-Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
 
 # Architecture
 TARGET_ARCH := arm64
@@ -16,11 +30,12 @@ TARGET_2ND_CPU_VARIANT := cortex-a15
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-ALLOW_MISSING_DEPENDENCIES := true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := hi6250
 TARGET_NO_BOOTLOADER := true
+
+# Dependencies
+ALLOW_MISSING_DEPENDENCIES := true
 
 # Kernel
 TARGET_PREBUILT_KERNEL := device/huawei/hi6250/prebuilt/zImage
@@ -36,13 +51,12 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
-# TWRP specific build flags
+# TWRP
 RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd_backlight0/brightness
 TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/Battery
 TW_USE_NEW_MINADBD := true
-#TW_USE_TOOLBOX := true
 TW_EXCLUDE_TWRPAPP := true
 TW_NO_LEGACY_PROPS := true
 BOARD_SUPPRESS_SECURE_ERASE := true
