@@ -72,7 +72,7 @@ on property:sys.usb.config=none && property:sys.usb.configfs=1
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
+    write /config/usb_gadget/g1/idVendor Huawei
     write /config/usb_gadget/g1/idProduct 0x103A
     start adbd
 
@@ -86,8 +86,8 @@ on property:sys.usb.config=mtp && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     symlink /config/usb_gadget/g1/functions/mtp.gs0 /config/usb_gadget/g1/configs/b.1/f1
     write /sys/devices/virtual/android_usb/android0/port_mode 3
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
@@ -96,8 +96,8 @@ on property:sys.usb.config=mtp && property:sys.usb.configfs=1
 on property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_adb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start adbd
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
@@ -111,8 +111,8 @@ on property:sys.usb.config=mtp,hdb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_hdb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start hdbd
 
 on  property:sys.usb.ffs_hdb.ready=1 && property:sys.usb.config=mtp,hdb && property:sys.usb.configfs=1
@@ -125,8 +125,8 @@ on  property:sys.usb.ffs_hdb.ready=1 && property:sys.usb.config=mtp,hdb && prope
 on property:sys.usb.config=mtp,adb,hdb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_adb_hdb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start adbd
     start hdbd
 
@@ -142,8 +142,8 @@ on property:sys.usb.config=ptp && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     write /config/usb_gadget/g1/functions/mass_storage.gs6/lun.0/file ${ro.cust.cdrom}
     symlink /config/usb_gadget/g1/functions/ptp.gs1 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/mass_storage.gs6 /config/usb_gadget/g1/configs/b.1/f2
@@ -154,8 +154,8 @@ on property:sys.usb.config=ptp && property:sys.usb.configfs=1
 on property:sys.usb.config=ptp,adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp_adb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start adbd
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=ptp,adb && property:sys.usb.configfs=1
@@ -171,8 +171,8 @@ on property:sys.usb.config=ptp,hdb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp_hdb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start hdbd
 
 on property:sys.usb.ffs_hdb.ready=1 && property:sys.usb.config=ptp,hdb && property:sys.usb.configfs=1
@@ -187,8 +187,8 @@ on property:sys.usb.ffs_hdb.ready=1 && property:sys.usb.config=ptp,hdb && proper
 on property:sys.usb.config=ptp,adb,hdb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp_adb_hdb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start adbd
     start hdbd
 
@@ -208,8 +208,8 @@ on property:sys.usb.config=manufacture && property:sys.usb.configfs=1
     stop adbd
     stop hdbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "manufacture"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     symlink /config/usb_gadget/g1/functions/hw_acm.hw_acm_modem /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/hw_acm.hw_acm_PCUI /config/usb_gadget/g1/configs/b.1/f2
     symlink /config/usb_gadget/g1/functions/hw_acm.hw_acm_DIAG /config/usb_gadget/g1/configs/b.1/f3
@@ -223,8 +223,8 @@ on property:sys.usb.config=manufacture && property:sys.usb.configfs=1
 on property:sys.usb.config=manufacture,adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "manufacture_adb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start adbd
     start hdbd
 
@@ -345,7 +345,7 @@ on property:sys.usb.config=rndis && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis"
-    write /config/usb_gadget/g1/idVendor 0x12d1
+    write /config/usb_gadget/g1/idVendor Huawei
     write /config/usb_gadget/g1/idProduct 0x108a
     write /sys/class/android_usb/android0/f_rndis/wceis  1
     symlink /config/usb_gadget/g1/functions/rndis.gs4 /config/usb_gadget/g1/configs/b.1/f1
@@ -357,7 +357,7 @@ on property:sys.usb.config=rndis && property:sys.usb.configfs=1
 on property:sys.usb.config=rndis,adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_adb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
+    write /config/usb_gadget/g1/idVendor Huawei
     write /config/usb_gadget/g1/idProduct 0x108a
     start adbd
 
@@ -374,7 +374,7 @@ on property:sys.usb.config=rndis,hdb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_hdb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
+    write /config/usb_gadget/g1/idVendor Huawei
     write /config/usb_gadget/g1/idProduct 0x108a
     start hdbd
 
@@ -390,7 +390,7 @@ on property:sys.usb.ffs_hdb.ready=1 && property:sys.usb.config=rndis,hdb && prop
 on property:sys.usb.config=rndis,adb,hdb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_adb_hdb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
+    write /config/usb_gadget/g1/idVendor Huawei
     write /config/usb_gadget/g1/idProduct 0x108a
     start adbd
     start hdbd
@@ -409,8 +409,8 @@ on property:sys.usb.config=mass_storage && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mass_storage"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     write /config/usb_gadget/g1/functions/mass_storage.gs6/lun.0/file none
     symlink /config/usb_gadget/g1/functions/mass_storage.gs6 /config/usb_gadget/g1/configs/b.1/f1
     write /sys/devices/virtual/android_usb/android0/port_mode 7
@@ -420,8 +420,8 @@ on property:sys.usb.config=mass_storage && property:sys.usb.configfs=1
 on property:sys.usb.config=mass_storage,adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mass_storage_adb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start adbd
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mass_storage,adb && property:sys.usb.configfs=1
@@ -436,8 +436,8 @@ on property:sys.usb.config=mass_storage,hdb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mass_storage_hdb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start hdbd
 
 on property:sys.usb.ffs_hdb.ready=1 && property:sys.usb.config=mass_storage,hdb && property:sys.usb.configfs=1
@@ -451,8 +451,8 @@ on property:sys.usb.ffs_hdb.ready=1 && property:sys.usb.config=mass_storage,hdb 
 on property:sys.usb.config=mass_storage,adb,hdb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mass_storage_adb_hdb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start adbd
     start hdbd
 
@@ -469,8 +469,8 @@ on property:sys.usb.config=hisuite,mtp,mass_storage && property:sys.usb.configfs
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hisuite_mtp_mass_storage"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     symlink /config/usb_gadget/g1/functions/mtp.gs0 /config/usb_gadget/g1/configs/b.1/f1
     write /config/usb_gadget/g1/functions/mass_storage.gs6/lun.0/file ${ro.cust.cdrom}
     symlink /config/usb_gadget/g1/functions/mass_storage.gs6 /config/usb_gadget/g1/configs/b.1/f2
@@ -481,8 +481,8 @@ on property:sys.usb.config=hisuite,mtp,mass_storage && property:sys.usb.configfs
 on property:sys.usb.config=hisuite,mtp,mass_storage,adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hisuite_mtp_mass_storage_adb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start adbd
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=hisuite,mtp,mass_storage,adb && property:sys.usb.configfs=1
@@ -498,8 +498,8 @@ on property:sys.usb.config=hisuite,mtp,mass_storage,hdb && property:sys.usb.conf
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hisuite_mtp_mass_storage_hdb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start hdbd
 
 on  property:sys.usb.ffs_hdb.ready=1 && property:sys.usb.config=hisuite,mtp,mass_storage,hdb && property:sys.usb.configfs=1
@@ -514,8 +514,8 @@ on  property:sys.usb.ffs_hdb.ready=1 && property:sys.usb.config=hisuite,mtp,mass
 on property:sys.usb.config=hisuite,mtp,mass_storage,adb,hdb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hisuite_mtp_mass_storage_adb_hdb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start adbd
     start hdbd
 
@@ -533,8 +533,8 @@ on property:sys.usb.config=rndis,serial && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_serial"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     write /sys/class/android_usb/android0/f_rndis/wceis  1
     symlink /config/usb_gadget/g1/functions/rndis.gs4 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/hw_acm.hw_acm_modem /config/usb_gadget/g1/configs/b.1/f2
@@ -550,8 +550,8 @@ on property:sys.usb.config=rndis,serial && property:sys.usb.configfs=1
 on property:sys.usb.config=rndis,serial,adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_serial_adb"
-    write /config/usb_gadget/g1/idVendor 0x12d1
-    write /config/usb_gadget/g1/idProduct 0x107e
+    write /config/usb_gadget/g1/idVendor Huawei
+    write /config/usb_gadget/g1/idProduct hi6250
     start adbd
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,serial,adb  && property:sys.usb.configfs=1
