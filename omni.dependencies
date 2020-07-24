@@ -1,0 +1,9 @@
+
+[
+	{
+		"remote":"github",
+		"repository":"GG2501YT/android_kernel_huawei_hi6250-hak86",
+		"target_path":"kernel/huawei/hi6250",
+		"revision":"7.x"
+	}
+]
