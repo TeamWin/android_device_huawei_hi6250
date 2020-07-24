@@ -1,3 +1,0 @@
-sys.usb.controller=hisi-usb-otg
-sys.usb.configfs=1
-persist.sys.usb.config=adb,mtp

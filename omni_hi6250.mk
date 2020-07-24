@@ -26,3 +26,9 @@ PRODUCT_DEVICE := hi6250
 PRODUCT_MODEL := hi6250
 PRODUCT_BRAND := huawei
 PRODUCT_MANUFACTURER := huawei
+
+# Important Props for USB
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    sys.usb.controller=hisi-usb-otg \
+    sys.usb.configfs=1 \
+    persist.sys.usb.config=adb,mtp
