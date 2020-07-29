@@ -3,25 +3,19 @@ import /init.recovery.hi6250.usb.rc
 on init
     symlink /dev/block/platform/hi_mci.0 /dev/block/bootdevice
 
-on property:ro.board.platform=hi6250
-    start teecd
-
 on fs
     start volisnotd
-    mount ext4 /dev/block/bootdevice/by-name/vendor /vendor ro nosuid nodev
+    start teecd
 
 service teecd /sbin/teecd
     user root
     group root
     disabled
-    seclabel u:r:tee:s0
 
 service volisnotd /sbin/volisnotd -m
-    oneshot
     user root
     group root
     disabled
-    seclabel u:r:tee:s0
 
 on property:vold.decrypt=trigger_shutdown_framework
     class_reset server
