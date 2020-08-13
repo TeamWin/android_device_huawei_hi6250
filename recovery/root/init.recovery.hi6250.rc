@@ -6,6 +6,7 @@ on init
 on fs
     start volisnotd
     start teecd
+    mount ext4 /dev/block/bootdevice/by-name/vendor /vendor ro nosuid nodev
 
 service teecd /sbin/teecd
     user root
