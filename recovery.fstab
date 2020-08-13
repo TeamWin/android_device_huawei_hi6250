@@ -7,10 +7,10 @@
 /oeminfo        emmc            /dev/block/bootdevice/by-name/oeminfo                   flags=display="OEMinfo";backup=1;flashimg=1
 /data           ext4            /dev/block/bootdevice/by-name/userdata                  flags=display="Data";backup=1;flashimg=1
 /system         ext4            /dev/block/bootdevice/by-name/system                    flags=display="System";backup=1;flashimg=0
-/vendor         ext4            /dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=1;flashimg=0
+/vendor         ext4            /dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=1;flashimg=0;wipeingui
 /product        ext4            /dev/block/bootdevice/by-name/product                   flags=display="Product";backup=1;flashimg=0
 /version        ext4            /dev/block/bootdevice/by-name/version                   flags=display="Version";backup=1;flashimg=0
-/splash2	ext4		/dev/block/bootdevice/by-name/splash2			flags=display="Splash2";backup=1;flashimg=0
+/splash2	ext4		/dev/block/bootdevice/by-name/splash2			flags=display="Splash2";backup=1;flashimg=0;wipeingui
 
 # Images
 /system_image   emmc            /dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;flashimg=1
